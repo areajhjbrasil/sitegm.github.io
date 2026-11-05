@@ -1,0 +1,1494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KINEL FOREIGN EXCHANGE - Corretora de Câmbio autorizada pelo Banco Central do Brasil. Soluções premium em câmbio comercial, turismo, remessas e hedge cambial.">
+    <meta name="keywords" content="corretora de câmbio, câmbio comercial, remessas internacionais, hedge cambial, Banco Central, KINEL FOREIGN EXCHANGE">
+    <title>KINEL FOREIGN EXCHANGE | Corretora de Câmbio Autorizada pelo Banco Central</title>
+    <link rel="canonical" href="https://agendamentoadm.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a1628;
+            --primary-light: #132337;
+            --accent: #c9a227;
+            --accent-hover: #e0b83a;
+            --gold-light: #f5e6b8;
+            --text: #e8eef7;
+            --text-muted: #94a3b8;
+            --white: #ffffff;
+            --card-bg: rgba(19, 35, 55, 0.7);
+            --border: rgba(201, 162, 39, 0.25);
+            --success: #10b981;
+            --gradient: linear-gradient(135deg, #0a1628 0%, #1a2f4a 50%, #0d1f33 100%);
+            --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(10, 22, 40, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent), #a67c00);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.4rem;
+            color: var(--primary);
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.4);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-text span:first-child {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span:last-child {
+            font-size: 0.7rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #a67c00);
+            color: var(--primary);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(201, 162, 39, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(201, 162, 39, 0.45);
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            padding: 0.75rem 1.75rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            border: 1.5px solid var(--accent);
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: rgba(201, 162, 39, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ========== HERO ========== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--gradient);
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse, rgba(201, 162, 39, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(to top, var(--primary), transparent);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid var(--border);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .hero-badge svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--accent);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+
+        .hero h1 span {
+            color: var(--accent);
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            max-width: 540px;
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .stat-item h3 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .hero-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(20px);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+        }
+
+        .hero-card h3 {
+            font-size: 1.1rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .auth-badge {
+            background: rgba(16, 185, 129, 0.15);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            color: var(--success);
+            padding: 0.4rem 0.9rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1.25rem;
+        }
+
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.85rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            font-size: 0.9rem;
+        }
+
+        .info-row:last-child {
+            border-bottom: none;
+        }
+
+        .info-row span:first-child {
+            color: var(--text-muted);
+        }
+
+        .info-row span:last-child {
+            color: var(--white);
+            font-weight: 500;
+            text-align: right;
+        }
+
+        /* ========== SECTIONS ========== */
+        section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header .label {
+            display: inline-block;
+            color: var(--accent);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        /* ========== QUEM SOMOS ========== */
+        #quem-somos {
+            background: var(--primary-light);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .about-content p {
+            color: var(--text-muted);
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(201, 162, 39, 0.15);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .feature-item h4 {
+            font-size: 0.95rem;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+        }
+
+        .feature-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .about-image {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+        }
+
+        .about-image .cnpj-box {
+            background: rgba(10, 22, 40, 0.6);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .cnpj-box h4 {
+            color: var(--accent);
+            font-size: 0.85rem;
+            margin-bottom: 0.75rem;
+            letter-spacing: 1px;
+        }
+
+        .cnpj-box p {
+            font-size: 0.9rem;
+            color: var(--text);
+            margin-bottom: 0.4rem;
+        }
+
+        /* ========== SERVIÇOS ========== */
+        #servicos {
+            background: var(--primary);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--border);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .service-card:hover::before {
+            opacity: 1;
+        }
+
+        .service-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.2), rgba(201, 162, 39, 0.05));
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        .service-card h3 {
+            font-size: 1.2rem;
+            color: var(--white);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.65;
+        }
+
+        /* ========== PRIVACIDADE ========== */
+        #privacidade {
+            background: var(--primary-light);
+        }
+
+        .privacy-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3rem;
+        }
+
+        .privacy-content h3 {
+            color: var(--accent);
+            font-size: 1.25rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .privacy-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-content p, .privacy-content li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+            line-height: 1.7;
+        }
+
+        .privacy-content ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* ========== FAQ ========== */
+        #faq {
+            background: var(--primary);
+        }
+
+        .faq-list {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+
+        .faq-item.active {
+            border-color: var(--border);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.35rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            color: var(--white);
+            font-size: 1.05rem;
+            font-weight: 500;
+            text-align: left;
+            font-family: inherit;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            font-size: 1.25rem;
+            color: var(--accent);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer p {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* ========== CONTATO ========== */
+        #contato {
+            background: var(--primary-light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            font-size: 1.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info > p {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(201, 162, 39, 0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .contact-item h4 {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+            font-weight: 600;
+        }
+
+        .contact-item p, .contact-item a {
+            color: var(--text);
+            font-size: 0.95rem;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            color: var(--accent);
+        }
+
+        .contact-form {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 2.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            background: rgba(10, 22, 40, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0.9rem 1.1rem;
+            color: var(--white);
+            font-size: 0.95rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .form-group textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #060e1a;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand .logo {
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            max-width: 300px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            font-weight: 600;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.65rem;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .bcb-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero p { margin-left: auto; margin-right: auto; }
+            .hero-buttons { justify-content: center; }
+            .hero-stats { justify-content: center; }
+            .about-grid, .contact-grid { grid-template-columns: 1fr; }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .mobile-toggle { display: block; }
+            nav ul.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(10, 22, 40, 0.98);
+                padding: 1.5rem 2rem;
+                gap: 1.25rem;
+                border-bottom: 1px solid var(--border);
+            }
+            .services-grid { grid-template-columns: 1fr; }
+            .about-features { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; }
+            .hero-stats { flex-direction: column; gap: 1.5rem; }
+            .privacy-content { padding: 1.75rem; }
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-up {
+            animation: fadeUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <div class="logo-icon">KF</div>
+                <div class="logo-text">
+                    <span>KINEL FOREIGN</span>
+                    <span>Exchange</span>
+                </div>
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#quem-somos">Quem Somos</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#privacidade">Privacidade</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contato" class="btn-primary" style="padding: 0.6rem 1.4rem;">Contato</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div>
+                <div class="hero-badge">
+                    <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                    Autorizada pelo Banco Central do Brasil
+                </div>
+                <h1>Excelência em <span>Câmbio</span> e Soluções Internacionais</h1>
+                <p>A KINEL FOREIGN EXCHANGE é uma corretora de câmbio de grande porte, autorizada pelo Banco Central do Brasil, oferecendo soluções sofisticadas e transparentes para empresas e pessoas físicas no mercado de câmbio.</p>
+                <div class="hero-buttons">
+                    <a href="#contato" class="btn-primary">Fale com um Especialista</a>
+                    <a href="#servicos" class="btn-outline">Conheça nossos Serviços</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>BCB</h3>
+                        <p>Autorizada e Supervisionada</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>00289</h3>
+                        <p>Código Mercado de Câmbio</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>SP</h3>
+                        <p>Av. Brigadeiro Faria Lima</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="auth-badge">● Autorizada em Atividade</div>
+                <h3>🔐 Dados Institucionais</h3>
+                <div class="info-row">
+                    <span>Razão Social</span>
+                    <span>KINEL FOREIGN EXCHANGE CORRETORA DE CÂMBIO LTDA</span>
+                </div>
+                <div class="info-row">
+                    <span>Nome Fantasia</span>
+                    <span>KINEL FOREIGN EXCHANGE</span>
+                </div>
+                <div class="info-row">
+                    <span>CNPJ</span>
+                    <span>63.436.443/0001-40</span>
+                </div>
+                <div class="info-row">
+                    <span>Segmento</span>
+                    <span>Sociedade Corretora de Câmbio</span>
+                </div>
+                <div class="info-row">
+                    <span>Atividade</span>
+                    <span>66.12-6-03 — Corretoras de Câmbio</span>
+                </div>
+                <div class="info-row">
+                    <span>Natureza Jurídica</span>
+                    <span>Sociedade Empresária Limitada</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUEM SOMOS -->
+    <section id="quem-somos">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Institucional</span>
+                <h2>Quem Somos</h2>
+                <p>Uma instituição sólida, transparente e comprometida com a excelência no mercado de câmbio brasileiro.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Confiança, Expertise e Segurança Regulatória</h3>
+                    <p>A <strong>KINEL FOREIGN EXCHANGE CORRETORA DE CÂMBIO LTDA</strong> é uma sociedade empresária limitada autorizada pelo Banco Central do Brasil a operar no segmento de Sociedade Corretora de Câmbio, com habilitação específica para o Mercado de Câmbio (código 00289).</p>
+                    <p>Localizada no coração financeiro de São Paulo, na prestigiada Avenida Brigadeiro Faria Lima, nossa equipe de especialistas oferece soluções personalizadas em operações de câmbio, sempre alinhadas às melhores práticas de compliance, governança e proteção ao cliente.</p>
+                    <p>Atuamos com rigor técnico e total transparência, prestando serviços a empresas de todos os portes e a pessoas físicas que necessitam de operações cambiais seguras, ágeis e competitivas.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Autorização BCB</h4>
+                                <p>Instituição autorizada e em atividade</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Compliance Rigoroso</h4>
+                                <p>Adequação total à legislação cambial</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Atendimento Premium</h4>
+                                <p>Soluções sob medida para cada cliente</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">✓</div>
+                            <div>
+                                <h4>Localização Estratégica</h4>
+                                <p>Av. Faria Lima — Jardim Paulistano</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.1rem;">Nossa Missão</h3>
+                    <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Facilitar o acesso de empresas e indivíduos ao mercado de câmbio de forma segura, transparente e eficiente, contribuindo para o desenvolvimento do comércio exterior brasileiro.</p>
+                    
+                    <h3 style="color: var(--accent); margin-bottom: 1rem; font-size: 1.1rem;">Nossa Visão</h3>
+                    <p style="color: var(--text-muted);">Ser referência nacional em corretagem de câmbio, reconhecida pela excelência operacional, integridade e capacidade de gerar valor sustentável aos nossos clientes.</p>
+                    
+                    <div class="cnpj-box">
+                        <h4>DADOS CADASTRAIS</h4>
+                        <p><strong>CNPJ:</strong> 63.436.443/0001-40</p>
+                        <p><strong>Endereço:</strong> Av. Brigadeiro Faria Lima, 2601 — 2º e 3º andares</p>
+                        <p><strong>Bairro:</strong> Jardim Paulistano — São Paulo/SP</p>
+                        <p><strong>CEP:</strong> 01452-924</p>
+                        <p><strong>Porte:</strong> Demais</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Soluções</span>
+                <h2>Nossos Serviços</h2>
+                <p>Oferecemos um portfólio completo de operações de câmbio, sempre em conformidade com as normas do Banco Central do Brasil.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">💱</div>
+                    <h3>Câmbio Comercial</h3>
+                    <p>Operações de compra e venda de moeda estrangeira vinculadas a operações de comércio exterior (exportação e importação), com assessoria completa na documentação e liquidação.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3>Câmbio Turismo</h3>
+                    <p>Disponibilização de moeda estrangeira em espécie e cartões pré-pagos para viagens internacionais, com taxas competitivas e atendimento ágil para pessoas físicas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3>Remessas Internacionais</h3>
+                    <p>Envio e recebimento de recursos do e para o exterior, de forma segura e rastreável, atendendo necessidades pessoais, familiares e empresariais com total transparência.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <h3>Hedge Cambial</h3>
+                    <p>Estruturação de operações de proteção contra oscilações de taxa de câmbio (NDF, opções e outros instrumentos), preservando a margem e o fluxo de caixa das empresas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏢</div>
+                    <h3>Câmbio para Empresas</h3>
+                    <p>Soluções sob medida para empresas de todos os portes: pagamentos a fornecedores no exterior, recebimento de exportações, aportes de capital e repatriação de lucros.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Consultoria Cambial</h3>
+                    <p>Orientação especializada sobre legislação cambial, estruturação de operações, compliance e melhores práticas para otimizar custos e mitigar riscos cambiais.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔄</div>
+                    <h3>Operações de Arbitragem</h3>
+                    <p>Identificação e execução de oportunidades de arbitragem entre diferentes mercados e instrumentos, sempre dentro dos limites regulatórios vigentes.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💳</div>
+                    <h3>Cartões Pré-Pagos</h3>
+                    <p>Emissão e recarga de cartões internacionais em diversas moedas, com controle de gastos e praticidade para viagens e despesas no exterior.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛡️</div>
+                    <h3>Compliance & PLD/FT</h3>
+                    <p>Estrutura robusta de Prevenção à Lavagem de Dinheiro e ao Financiamento do Terrorismo, garantindo a segurança e a regularidade de todas as operações.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POLÍTICA DE PRIVACIDADE -->
+    <section id="privacidade">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Transparência</span>
+                <h2>Política de Privacidade</h2>
+                <p>Compromisso com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
+            </div>
+            <div class="privacy-content">
+                <h3>1. Quem somos</h3>
+                <p>A KINEL FOREIGN EXCHANGE CORRETORA DE CÂMBIO LTDA, inscrita no CNPJ sob o nº 63.436.443/0001-40, com sede na Av. Brigadeiro Faria Lima, 2601, 2º e 3º andares, Jardim Paulistano, São Paulo/SP, CEP 01452-924, é a controladora dos dados pessoais tratados no âmbito desta Política.</p>
+
+                <h3>2. Quais dados coletamos</h3>
+                <p>Podemos coletar e tratar as seguintes categorias de dados:</p>
+                <ul>
+                    <li>Dados de identificação: nome completo, CPF/CNPJ, RG, data de nascimento, nacionalidade;</li>
+                    <li>Dados de contato: e-mail, telefone, endereço residencial ou comercial;</li>
+                    <li>Dados financeiros e patrimoniais necessários às operações de câmbio;</li>
+                    <li>Dados de origem e destino dos recursos, conforme exigido pela regulamentação cambial e de PLD/FT;</li>
+                    <li>Dados de navegação e cookies quando você acessa nosso site.</li>
+                </ul>
+
+                <h3>3. Finalidades do tratamento</h3>
+                <p>Os dados são tratados para:</p>
+                <ul>
+                    <li>Execução de operações de câmbio e cumprimento de obrigações contratuais;</li>
+                    <li>Cumprimento de obrigações legais e regulatórias perante o Banco Central do Brasil, Receita Federal e demais autoridades;</li>
+                    <li>Prevenção à lavagem de dinheiro e ao financiamento do terrorismo (PLD/FT);</li>
+                    <li>Atendimento a solicitações e comunicação com o cliente;</li>
+                    <li>Melhoria dos nossos serviços e segurança da informação.</li>
+                </ul>
+
+                <h3>4. Base legal</h3>
+                <p>O tratamento de dados fundamenta-se no cumprimento de obrigação legal ou regulatória, na execução de contrato, no legítimo interesse e, quando aplicável, no consentimento do titular.</p>
+
+                <h3>5. Compartilhamento de dados</h3>
+                <p>Os dados poderão ser compartilhados com o Banco Central do Brasil, Receita Federal, autoridades competentes, prestadores de serviços essenciais (tecnologia, auditoria, consultoria jurídica) e instituições financeiras envolvidas na liquidação das operações, sempre dentro dos limites legais.</p>
+
+                <h3>6. Direitos do titular</h3>
+                <p>Nos termos da LGPD, você tem direito a: confirmação da existência de tratamento, acesso, correção, anonimização, portabilidade, eliminação (quando aplicável), informação sobre compartilhamentos e revogação do consentimento. Para exercer seus direitos, entre em contato pelo e-mail <strong>diego.lima@tpgroup.com.br</strong>.</p>
+
+                <h3>7. Segurança e retenção</h3>
+                <p>Adotamos medidas técnicas e organizacionais adequadas para proteger os dados pessoais. Os dados são retidos pelo tempo necessário ao cumprimento das finalidades e das obrigações legais e regulatórias aplicáveis ao mercado de câmbio.</p>
+
+                <h3>8. Contato do Encarregado (DPO)</h3>
+                <p>Para questões relacionadas à privacidade e proteção de dados, entre em contato pelo e-mail: <strong>diego.lima@tpgroup.com.br</strong> ou telefone <strong>(11) 8627-4065</strong>.</p>
+
+                <h3>9. Atualizações</h3>
+                <p>Esta Política poderá ser atualizada periodicamente. A versão vigente estará sempre disponível neste site. Recomendamos a leitura periódica.</p>
+                <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--accent);">Última atualização: Agosto de 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Dúvidas</span>
+                <h2>Perguntas Frequentes</h2>
+                <p>Respostas claras para as principais dúvidas sobre nossos serviços e o mercado de câmbio.</p>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        A KINEL FOREIGN EXCHANGE é autorizada pelo Banco Central?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. A KINEL FOREIGN EXCHANGE CORRETORA DE CÂMBIO LTDA (CNPJ 63.436.443/0001-40) encontra-se na situação <strong>Autorizada em Atividade</strong> no segmento Sociedade Corretora de Câmbio, habilitada a praticar operações no Mercado de Câmbio (código 00289), nos termos da legislação em vigor.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quais tipos de operações de câmbio vocês realizam?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Realizamos operações de câmbio comercial (exportação e importação), câmbio turismo, remessas internacionais, hedge cambial, operações para empresas (pagamentos a fornecedores, recebimento de exportações, aportes e repatriação) e consultoria especializada, sempre em conformidade com as normas do Banco Central.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Pessoas físicas podem operar com a KINEL?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sim. Atendemos tanto pessoas físicas quanto jurídicas. Pessoas físicas podem realizar operações de câmbio turismo, remessas internacionais e outras operações permitidas pela regulamentação vigente, mediante apresentação da documentação exigida.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Quais documentos são necessários para abrir uma operação?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Os documentos variam conforme o tipo de operação e o perfil do cliente (PF ou PJ). Em geral, solicitamos documentos de identificação, comprovante de residência/endereço, e, para operações comerciais, a documentação específica da operação (faturas, contratos, etc.). Nossa equipe orienta sobre a documentação completa em cada caso.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como funciona a proteção (hedge) cambial?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>O hedge cambial permite travar uma taxa de câmbio futura, protegendo a empresa contra oscilações desfavoráveis. Utilizamos instrumentos como NDF (Non-Deliverable Forward) e outros permitidos pela regulamentação. Nossa equipe analisa o fluxo de caixa e a exposição cambial para estruturar a melhor solução.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Onde está localizada a sede da empresa?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nossa sede está na Avenida Brigadeiro Faria Lima, nº 2601, 2º e 3º andares, Jardim Paulistano, São Paulo/SP, CEP 01452-924 — um dos principais centros financeiros da América Latina.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Como posso entrar em contato?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Você pode nos contatar pelo telefone <strong>(11) 8627-4065</strong>, pelo e-mail <strong>diego.lima@tpgroup.com.br</strong> ou preenchendo o formulário na seção Contato deste site. Nossa equipe terá prazer em atendê-lo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Fale Conosco</span>
+                <h2>Entre em Contato</h2>
+                <p>Nossa equipe está pronta para entender suas necessidades e apresentar a melhor solução em câmbio.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Estamos à disposição</h3>
+                    <p>Entre em contato por qualquer um dos canais abaixo. Respondemos com agilidade e total confidencialidade.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Endereço</h4>
+                                <p>Av. Brigadeiro Faria Lima, 2601<br>2º e 3º andares — Jardim Paulistano<br>São Paulo/SP — CEP 01452-924</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p><a href="tel:+551186274065">(11) 8627-4065</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>E-mail</h4>
+                                <p><a href="mailto:diego.lima@tpgroup.com.br">diego.lima@tpgroup.com.br</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🏛️</div>
+                            <div>
+                                <h4>CNPJ</h4>
+                                <p>63.436.443/0001-40</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="return handleSubmit(event)">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nome">Nome completo *</label>
+                                <input type="text" id="nome" name="nome" required placeholder="Seu nome">
+                            </div>
+                            <div class="form-group">
+                                <label for="empresa">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" placeholder="Nome da empresa">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">E-mail *</label>
+                                <input type="email" id="email" name="email" required placeholder="seu@email.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone *</label>
+                                <input type="tel" id="telefone" name="telefone" required placeholder="(11) 99999-9999">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="assunto">Assunto *</label>
+                            <select id="assunto" name="assunto" required>
+                                <option value="">Selecione</option>
+                                <option value="cambio-comercial">Câmbio Comercial</option>
+                                <option value="cambio-turismo">Câmbio Turismo</option>
+                                <option value="remessas">Remessas Internacionais</option>
+                                <option value="hedge">Hedge Cambial</option>
+                                <option value="consultoria">Consultoria</option>
+                                <option value="outro">Outro assunto</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem *</label>
+                            <textarea id="mensagem" name="mensagem" required placeholder="Descreva sua necessidade..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+                            Enviar Mensagem
+                        </button>
+                        <p class="form-note">Ao enviar, você concorda com nossa Política de Privacidade. Responderemos em até 1 dia útil.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#inicio" class="logo">
+                        <div class="logo-icon">KF</div>
+                        <div class="logo-text">
+                            <span>KINEL FOREIGN</span>
+                            <span>Exchange</span>
+                        </div>
+                    </a>
+                    <p>Corretora de Câmbio autorizada pelo Banco Central do Brasil. Soluções premium em operações cambiais com segurança e transparência.</p>
+                    <div class="bcb-badge">
+                        ● Autorizada pelo Banco Central — Mercado de Câmbio 00289
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#quem-somos">Quem Somos</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#privacidade">Privacidade</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#servicos">Câmbio Comercial</a></li>
+                        <li><a href="#servicos">Câmbio Turismo</a></li>
+                        <li><a href="#servicos">Remessas</a></li>
+                        <li><a href="#servicos">Hedge Cambial</a></li>
+                        <li><a href="#servicos">Consultoria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="tel:+551186274065">(11) 8627-4065</a></li>
+                        <li><a href="mailto:diego.lima@tpgroup.com.br">diego.lima@tpgroup.com.br</a></li>
+                        <li style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem;">Av. Brig. Faria Lima, 2601<br>2º e 3º andares — São Paulo/SP</li>
+                        <li style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">CNPJ 63.436.443/0001-40</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 KINEL FOREIGN EXCHANGE CORRETORA DE CÂMBIO LTDA. Todos os direitos reservados.</p>
+                <p>Instituição autorizada pelo Banco Central do Brasil • Sociedade Corretora de Câmbio</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        mobileToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileToggle.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.textContent = '☰';
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const item = btn.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+
+        // Form handler
+        function handleSubmit(e) {
+            e.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const telefone = document.getElementById('telefone').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            const subject = encodeURIComponent([Site KINEL] ${assunto} - ${nome});
+            const body = encodeURIComponent(
+                Nome: ${nome}\nE-mail: ${email}\nTelefone: ${telefone}\nAssunto: ${assunto}\n\nMensagem:\n${mensagem}
+            );
+            
+            window.location.href = mailto:diego.lima@tpgroup.com.br?subject=${subject}&body=${body};
+            
+            alert('Obrigado! Seu cliente de e-mail será aberto para envio da mensagem. Caso prefira, entre em contato diretamente pelo telefone (11) 8627-4065.');
+            return false;
+        }
+
+        // Active nav link on scroll
+        const sections = document.querySelectorAll('section[id]');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const top = section.offsetTop - 100;
+                if (window.scrollY >= top) current = section.getAttribute('id');
+            });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') === '#' + current) a.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
